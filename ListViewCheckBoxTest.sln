@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2000
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListViewCheckBoxTest", "ListViewCheckBoxTest\ListViewCheckBoxTest.csproj", "{FE1C6A06-0C07-4A9C-ABE3-1A47C70A9B79}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE1C6A06-0C07-4A9C-ABE3-1A47C70A9B79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE1C6A06-0C07-4A9C-ABE3-1A47C70A9B79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE1C6A06-0C07-4A9C-ABE3-1A47C70A9B79}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{FE1C6A06-0C07-4A9C-ABE3-1A47C70A9B79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE1C6A06-0C07-4A9C-ABE3-1A47C70A9B79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE1C6A06-0C07-4A9C-ABE3-1A47C70A9B79}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C44BFC8E-D71F-4886-9D63-13C657DC29FE}
+	EndGlobalSection
+EndGlobal
