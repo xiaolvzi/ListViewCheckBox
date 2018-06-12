@@ -423,6 +423,7 @@ int color dim_foreground_disabled_material_light 0x7f0c0013
 int color dim_foreground_material_dark 0x7f0c0014
 int color dim_foreground_material_light 0x7f0c0015
 int color error_color_material 0x7f0c0016
+int color filename 0x7f0c0061
 int color foreground_material_dark 0x7f0c0017
 int color foreground_material_light 0x7f0c0018
 int color highlighted_text_material_dark 0x7f0c0019
@@ -459,8 +460,8 @@ int color secondary_text_disabled_material_dark 0x7f0c0033
 int color secondary_text_disabled_material_light 0x7f0c0034
 int color switch_thumb_disabled_material_dark 0x7f0c0035
 int color switch_thumb_disabled_material_light 0x7f0c0036
-int color switch_thumb_material_dark 0x7f0c0061
-int color switch_thumb_material_light 0x7f0c0062
+int color switch_thumb_material_dark 0x7f0c0062
+int color switch_thumb_material_light 0x7f0c0063
 int color switch_thumb_normal_material_dark 0x7f0c0037
 int color switch_thumb_normal_material_light 0x7f0c0038
 int color tooltip_background_dark 0x7f0c0039

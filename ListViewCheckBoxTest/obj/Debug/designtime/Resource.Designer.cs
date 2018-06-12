@@ -1358,6 +1358,9 @@ namespace ListViewCheckBoxTest
 			// aapt resource value: 2131099702
 			public static int error_color_material = 2131099702;
 			
+			// aapt resource value: 0
+			public static int filename = 0;
+			
 			// aapt resource value: 2131099703
 			public static int foreground_material_dark = 2131099703;
 			

@@ -2600,6 +2600,7 @@ containing a value of this type.
         public static int abc_tint_switch_track=0x7f0c005e;
         public static int accent_material_dark=0x7f0c0004;
         public static int accent_material_light=0x7f0c0005;
+        public static int artists_list_backgroundcolor=0x7f0c005f;
         public static int background_floating_material_dark=0x7f0c0006;
         public static int background_floating_material_light=0x7f0c0007;
         public static int background_material_dark=0x7f0c0008;
@@ -2616,7 +2617,7 @@ containing a value of this type.
         public static int colorPrimary=0x7f0c0047;
         public static int colorPrimaryDark=0x7f0c0048;
         public static int design_bottom_navigation_shadow_color=0x7f0c003c;
-        public static int design_error=0x7f0c005f;
+        public static int design_error=0x7f0c0060;
         public static int design_fab_shadow_end_color=0x7f0c003d;
         public static int design_fab_shadow_mid_color=0x7f0c003e;
         public static int design_fab_shadow_start_color=0x7f0c003f;
@@ -2625,7 +2626,7 @@ containing a value of this type.
         public static int design_fab_stroke_top_inner_color=0x7f0c0042;
         public static int design_fab_stroke_top_outer_color=0x7f0c0043;
         public static int design_snackbar_background_color=0x7f0c0044;
-        public static int design_tint_password_toggle=0x7f0c0060;
+        public static int design_tint_password_toggle=0x7f0c0061;
         public static int dim_foreground_disabled_material_dark=0x7f0c0012;
         public static int dim_foreground_disabled_material_light=0x7f0c0013;
         public static int dim_foreground_material_dark=0x7f0c0014;
@@ -2667,8 +2668,8 @@ containing a value of this type.
         public static int secondary_text_disabled_material_light=0x7f0c0034;
         public static int switch_thumb_disabled_material_dark=0x7f0c0035;
         public static int switch_thumb_disabled_material_light=0x7f0c0036;
-        public static int switch_thumb_material_dark=0x7f0c0061;
-        public static int switch_thumb_material_light=0x7f0c0062;
+        public static int switch_thumb_material_dark=0x7f0c0062;
+        public static int switch_thumb_material_light=0x7f0c0063;
         public static int switch_thumb_normal_material_dark=0x7f0c0037;
         public static int switch_thumb_normal_material_light=0x7f0c0038;
         public static int tooltip_background_dark=0x7f0c0039;

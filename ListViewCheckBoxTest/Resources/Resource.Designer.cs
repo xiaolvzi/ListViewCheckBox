@@ -1358,6 +1358,9 @@ namespace ListViewCheckBoxTest
 			// aapt resource value: 0x7f0c0016
 			public const int error_color_material = 2131492886;
 			
+			// aapt resource value: 0x7f0c0061
+			public const int filename = 2131492961;
+			
 			// aapt resource value: 0x7f0c0017
 			public const int foreground_material_dark = 2131492887;
 			
@@ -1466,11 +1469,11 @@ namespace ListViewCheckBoxTest
 			// aapt resource value: 0x7f0c0036
 			public const int switch_thumb_disabled_material_light = 2131492918;
 			
-			// aapt resource value: 0x7f0c0061
-			public const int switch_thumb_material_dark = 2131492961;
-			
 			// aapt resource value: 0x7f0c0062
-			public const int switch_thumb_material_light = 2131492962;
+			public const int switch_thumb_material_dark = 2131492962;
+			
+			// aapt resource value: 0x7f0c0063
+			public const int switch_thumb_material_light = 2131492963;
 			
 			// aapt resource value: 0x7f0c0037
 			public const int switch_thumb_normal_material_dark = 2131492919;

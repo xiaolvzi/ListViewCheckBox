@@ -5,7 +5,7 @@ using Android.Support.V7.App;
 using System.Collections.Generic;
 using Android.Content;
 using Android.Views;
-using System;
+using Android.Util;
 
 namespace ListViewCheckBoxTest
 {
@@ -20,33 +20,17 @@ namespace ListViewCheckBoxTest
 
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
+            
             mListView = FindViewById<ListView>(Resource.Id.listview);
-            List<TableList> list = new List<TableList>();
 
-            list.Add(new TableList("Germany",false));
-            list.Add(new TableList("France", false));
-            list.Add(new TableList("Finland", false));
-            list.Add(new TableList("Germany", false));
-            list.Add(new TableList("France", false));
-            list.Add(new TableList("Finland", false));
-            list.Add(new TableList("Germany", false));
-            list.Add(new TableList("France", false));
-            list.Add(new TableList("Finland", false));
-            list.Add(new TableList("Germany", false));
-            list.Add(new TableList("France", false));
-            list.Add(new TableList("Finland", false));
-            list.Add(new TableList("Germany", false));
-            list.Add(new TableList("France", false));
-            list.Add(new TableList("Finland", false));
-            list.Add(new TableList("Germany", false));
-            list.Add(new TableList("France", false));
-            list.Add(new TableList("Finland", false));
-
-            adapter = new MyAdapter(this, list);
+           
+            adapter = new MyAdapter(this, MyApplication.useritems);
             mListView.Adapter = adapter;
             mListView.ItemClick += MListView_ItemClick;
         }
 
+        //click the item to change the CheckBox's state by Adapter's changeState method
+        //And, at the same time, we need to record the CheckBox's state by our Data source -- mitems
         private void MListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
             var ll = e.View as LinearLayout;
@@ -61,6 +45,19 @@ namespace ListViewCheckBoxTest
                 cb.Checked = true;
                 adapter.changeState((int)cb.Tag, true);
             }
+        }
+
+        //if the acitivty is destroyed, you need to update the database.
+        protected override void OnDestroy()
+        {
+            base.OnDestroy();
+
+            for (int i=0;i<MyApplication.useritems.Count;i++)
+            {
+                MyApplication.daoList[i].isCheck = MyApplication.useritems[i].bl;
+
+            }
+            DBHelper.updateData(MyApplication.daoList);
         }
 
         class MyAdapter : BaseAdapter
@@ -114,6 +111,8 @@ namespace ListViewCheckBoxTest
                 holder.cb.Focusable = false;
                 holder.cb.Checked = mitems[position].bl;
                 holder.iv.SetImageResource(Resource.Drawable.dapao);
+               // holder.tv.SetTextColor(mContext.GetColorStateList(Resource.Color.filename));
+                //Add CheckedChange event to detect the CheckBox's click event and change the mitems's CheckBox's state.
                 holder.cb.CheckedChange += Cb_CheckedChange;
                 return convertView;
 
@@ -132,12 +131,15 @@ namespace ListViewCheckBoxTest
                     mitems[(int)cb.Tag].bl = false;
                     this.NotifyDataSetChanged();
                 }
+
+               // DBHelper.updateData(new Dao((int)cb.Tag + 1, mitems[(int)cb.Tag].Name, mitems[(int)cb.Tag].bl));
             }
 
             internal void changeState(int tag, bool v)
             {
                 mitems[tag].bl = v;
                 this.NotifyDataSetChanged();
+               // DBHelper.updateData(new Dao(tag + 1, mitems[tag].Name, mitems[tag].bl));
             }
         }
 
@@ -148,22 +150,26 @@ namespace ListViewCheckBoxTest
             public CheckBox cb { get; set; }
 
         }
-        public class TableList : Java.Lang.Object
+
+
+        //I add the bool in this class, so you can change the CheckBox's state by your Data Source
+        //That means that your CheckBox's state based upon your Data Source.
+        
+
+
+    }
+    public class TableList : Java.Lang.Object
+    {
+        private string v;
+
+
+        public TableList(string name, bool b)
         {
-            private string v;
-
-
-
-            public TableList(string name, bool b)
-            {
-                this.Name = name;
-                this.bl = b;
-            }
-            public string Name { get; set; }
-            public bool bl { get; set; }
+            this.Name = name;
+            this.bl = b;
         }
-
-
+        public string Name { get; set; }
+        public bool bl { get; set; }
     }
 }
 

@@ -1,9 +1,9 @@
-C:\VS_WorkSpace\ListViewCheckBoxTest\ListViewCheckBoxTest\obj\Debug\ListViewCheckBoxTest.csprojAssemblyReference.cache
-C:\VS_WorkSpace\ListViewCheckBoxTest\ListViewCheckBoxTest\obj\Debug\ListViewCheckBoxTest.csproj.CoreCompileInputs.cache
 C:\VS_WorkSpace\ListViewCheckBoxTest\ListViewCheckBoxTest\bin\Debug\ListViewCheckBoxTest.dll
 C:\VS_WorkSpace\ListViewCheckBoxTest\ListViewCheckBoxTest\bin\Debug\ListViewCheckBoxTest.pdb
 C:\VS_WorkSpace\ListViewCheckBoxTest\ListViewCheckBoxTest\bin\Debug\ListViewCheckBoxTest.ListViewCheckBoxTest.apk
 C:\VS_WorkSpace\ListViewCheckBoxTest\ListViewCheckBoxTest\bin\Debug\ListViewCheckBoxTest.ListViewCheckBoxTest-Signed.apk
+C:\VS_WorkSpace\ListViewCheckBoxTest\ListViewCheckBoxTest\obj\Debug\ListViewCheckBoxTest.csprojAssemblyReference.cache
+C:\VS_WorkSpace\ListViewCheckBoxTest\ListViewCheckBoxTest\obj\Debug\ListViewCheckBoxTest.csproj.CoreCompileInputs.cache
 C:\VS_WorkSpace\ListViewCheckBoxTest\ListViewCheckBoxTest\obj\Debug\ListViewCheckBoxTest.dll
 C:\VS_WorkSpace\ListViewCheckBoxTest\ListViewCheckBoxTest\obj\Debug\ListViewCheckBoxTest.pdb
 C:\VS_WorkSpace\ListViewCheckBoxTest\ListViewCheckBoxTest\obj\Debug\android\bin\ListViewCheckBoxTest.ListViewCheckBoxTest.apk
@@ -67,3 +67,9 @@ C:\VS_WorkSpace\ListViewCheckBoxTest\ListViewCheckBoxTest\obj\Debug\android\asse
 C:\VS_WorkSpace\ListViewCheckBoxTest\ListViewCheckBoxTest\obj\Debug\android\assets\System.Runtime.Serialization.pdb
 C:\VS_WorkSpace\ListViewCheckBoxTest\ListViewCheckBoxTest\obj\Debug\android\assets\System.ServiceModel.Internals.pdb
 C:\VS_WorkSpace\ListViewCheckBoxTest\ListViewCheckBoxTest\obj\Debug\android\assets\System.Xml.pdb
+C:\VS_WorkSpace\ListViewCheckBoxTest\ListViewCheckBoxTest\obj\Debug\res\color\filename.xml
+C:\VS_WorkSpace\ListViewCheckBoxTest\ListViewCheckBoxTest\bin\Debug\SQLite-net.pdb
+C:\VS_WorkSpace\ListViewCheckBoxTest\ListViewCheckBoxTest\obj\Debug\linksrc\SQLite-net.pdb
+C:\VS_WorkSpace\ListViewCheckBoxTest\ListViewCheckBoxTest\obj\Debug\android\assets\SQLite-net.pdb
+C:\VS_WorkSpace\ListViewCheckBoxTest\ListViewCheckBoxTest\bin\Debug\ListViewCheckBoxTest.dll
+C:\VS_WorkSpace\ListViewCheckBoxTest\ListViewCheckBoxTest\obj\Debug\linksrc\ListViewCheckBoxTest.dll.mdb

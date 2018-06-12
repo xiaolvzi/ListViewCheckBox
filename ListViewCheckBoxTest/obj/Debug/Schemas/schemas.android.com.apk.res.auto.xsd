@@ -2,7 +2,7 @@
 <xs:schema xmlns:app="http://schemas.android.com/apk/res-auto" attributeFormDefault="qualified" targetNamespace="http://schemas.android.com/apk/res-auto" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:annotation>
     <xs:documentation>v26</xs:documentation>
-    <xs:documentation>5/30/2018 10:42:58 AM</xs:documentation>
+    <xs:documentation>6/12/2018 1:33:38 PM</xs:documentation>
   </xs:annotation>
   <xs:attribute name="allowStacking">
     <xs:annotation>
@@ -111,6 +111,7 @@
             <xs:enumeration value="@color/dim_foreground_material_dark" />
             <xs:enumeration value="@color/dim_foreground_material_light" />
             <xs:enumeration value="@color/error_color_material" />
+            <xs:enumeration value="@color/filename" />
             <xs:enumeration value="@color/foreground_material_dark" />
             <xs:enumeration value="@color/foreground_material_light" />
             <xs:enumeration value="@color/highlighted_text_material_dark" />
@@ -2810,6 +2811,7 @@
             <xs:enumeration value="@color/dim_foreground_material_dark" />
             <xs:enumeration value="@color/dim_foreground_material_light" />
             <xs:enumeration value="@color/error_color_material" />
+            <xs:enumeration value="@color/filename" />
             <xs:enumeration value="@color/foreground_material_dark" />
             <xs:enumeration value="@color/foreground_material_light" />
             <xs:enumeration value="@color/highlighted_text_material_dark" />
@@ -11808,6 +11810,7 @@
             <xs:enumeration value="@color/dim_foreground_material_dark" />
             <xs:enumeration value="@color/dim_foreground_material_light" />
             <xs:enumeration value="@color/error_color_material" />
+            <xs:enumeration value="@color/filename" />
             <xs:enumeration value="@color/foreground_material_dark" />
             <xs:enumeration value="@color/foreground_material_light" />
             <xs:enumeration value="@color/highlighted_text_material_dark" />
@@ -13038,6 +13041,7 @@
             <xs:enumeration value="@color/dim_foreground_material_dark" />
             <xs:enumeration value="@color/dim_foreground_material_light" />
             <xs:enumeration value="@color/error_color_material" />
+            <xs:enumeration value="@color/filename" />
             <xs:enumeration value="@color/foreground_material_dark" />
             <xs:enumeration value="@color/foreground_material_light" />
             <xs:enumeration value="@color/highlighted_text_material_dark" />
@@ -13751,6 +13755,7 @@
             <xs:enumeration value="@color/dim_foreground_material_dark" />
             <xs:enumeration value="@color/dim_foreground_material_light" />
             <xs:enumeration value="@color/error_color_material" />
+            <xs:enumeration value="@color/filename" />
             <xs:enumeration value="@color/foreground_material_dark" />
             <xs:enumeration value="@color/foreground_material_light" />
             <xs:enumeration value="@color/highlighted_text_material_dark" />
@@ -17386,6 +17391,7 @@
             <xs:enumeration value="@color/dim_foreground_material_dark" />
             <xs:enumeration value="@color/dim_foreground_material_light" />
             <xs:enumeration value="@color/error_color_material" />
+            <xs:enumeration value="@color/filename" />
             <xs:enumeration value="@color/foreground_material_dark" />
             <xs:enumeration value="@color/foreground_material_light" />
             <xs:enumeration value="@color/highlighted_text_material_dark" />
@@ -18445,6 +18451,7 @@
             <xs:enumeration value="@color/dim_foreground_material_dark" />
             <xs:enumeration value="@color/dim_foreground_material_light" />
             <xs:enumeration value="@color/error_color_material" />
+            <xs:enumeration value="@color/filename" />
             <xs:enumeration value="@color/foreground_material_dark" />
             <xs:enumeration value="@color/foreground_material_light" />
             <xs:enumeration value="@color/highlighted_text_material_dark" />
@@ -20610,6 +20617,7 @@
             <xs:enumeration value="@color/dim_foreground_material_dark" />
             <xs:enumeration value="@color/dim_foreground_material_light" />
             <xs:enumeration value="@color/error_color_material" />
+            <xs:enumeration value="@color/filename" />
             <xs:enumeration value="@color/foreground_material_dark" />
             <xs:enumeration value="@color/foreground_material_light" />
             <xs:enumeration value="@color/highlighted_text_material_dark" />
@@ -21865,6 +21873,7 @@
             <xs:enumeration value="@color/dim_foreground_material_dark" />
             <xs:enumeration value="@color/dim_foreground_material_light" />
             <xs:enumeration value="@color/error_color_material" />
+            <xs:enumeration value="@color/filename" />
             <xs:enumeration value="@color/foreground_material_dark" />
             <xs:enumeration value="@color/foreground_material_light" />
             <xs:enumeration value="@color/highlighted_text_material_dark" />
@@ -24238,6 +24247,7 @@
             <xs:enumeration value="@color/dim_foreground_material_dark" />
             <xs:enumeration value="@color/dim_foreground_material_light" />
             <xs:enumeration value="@color/error_color_material" />
+            <xs:enumeration value="@color/filename" />
             <xs:enumeration value="@color/foreground_material_dark" />
             <xs:enumeration value="@color/foreground_material_light" />
             <xs:enumeration value="@color/highlighted_text_material_dark" />
@@ -25996,6 +26006,7 @@
             <xs:enumeration value="@color/dim_foreground_material_dark" />
             <xs:enumeration value="@color/dim_foreground_material_light" />
             <xs:enumeration value="@color/error_color_material" />
+            <xs:enumeration value="@color/filename" />
             <xs:enumeration value="@color/foreground_material_dark" />
             <xs:enumeration value="@color/foreground_material_light" />
             <xs:enumeration value="@color/highlighted_text_material_dark" />
@@ -26709,6 +26720,7 @@
             <xs:enumeration value="@color/dim_foreground_material_dark" />
             <xs:enumeration value="@color/dim_foreground_material_light" />
             <xs:enumeration value="@color/error_color_material" />
+            <xs:enumeration value="@color/filename" />
             <xs:enumeration value="@color/foreground_material_dark" />
             <xs:enumeration value="@color/foreground_material_light" />
             <xs:enumeration value="@color/highlighted_text_material_dark" />
@@ -27087,6 +27099,7 @@
             <xs:enumeration value="@color/dim_foreground_material_dark" />
             <xs:enumeration value="@color/dim_foreground_material_light" />
             <xs:enumeration value="@color/error_color_material" />
+            <xs:enumeration value="@color/filename" />
             <xs:enumeration value="@color/foreground_material_dark" />
             <xs:enumeration value="@color/foreground_material_light" />
             <xs:enumeration value="@color/highlighted_text_material_dark" />
@@ -29043,6 +29056,7 @@
             <xs:enumeration value="@color/dim_foreground_material_dark" />
             <xs:enumeration value="@color/dim_foreground_material_light" />
             <xs:enumeration value="@color/error_color_material" />
+            <xs:enumeration value="@color/filename" />
             <xs:enumeration value="@color/foreground_material_dark" />
             <xs:enumeration value="@color/foreground_material_light" />
             <xs:enumeration value="@color/highlighted_text_material_dark" />
@@ -30286,6 +30300,7 @@
             <xs:enumeration value="@color/dim_foreground_material_dark" />
             <xs:enumeration value="@color/dim_foreground_material_light" />
             <xs:enumeration value="@color/error_color_material" />
+            <xs:enumeration value="@color/filename" />
             <xs:enumeration value="@color/foreground_material_dark" />
             <xs:enumeration value="@color/foreground_material_light" />
             <xs:enumeration value="@color/highlighted_text_material_dark" />

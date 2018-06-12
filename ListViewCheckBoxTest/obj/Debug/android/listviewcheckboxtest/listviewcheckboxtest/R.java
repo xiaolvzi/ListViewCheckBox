@@ -2631,6 +2631,7 @@ containing a value of this type.
         public static final int dim_foreground_material_dark=0x7f0c0014;
         public static final int dim_foreground_material_light=0x7f0c0015;
         public static final int error_color_material=0x7f0c0016;
+        public static final int filename=0x7f0c0061;
         public static final int foreground_material_dark=0x7f0c0017;
         public static final int foreground_material_light=0x7f0c0018;
         public static final int highlighted_text_material_dark=0x7f0c0019;
@@ -2667,8 +2668,8 @@ containing a value of this type.
         public static final int secondary_text_disabled_material_light=0x7f0c0034;
         public static final int switch_thumb_disabled_material_dark=0x7f0c0035;
         public static final int switch_thumb_disabled_material_light=0x7f0c0036;
-        public static final int switch_thumb_material_dark=0x7f0c0061;
-        public static final int switch_thumb_material_light=0x7f0c0062;
+        public static final int switch_thumb_material_dark=0x7f0c0062;
+        public static final int switch_thumb_material_light=0x7f0c0063;
         public static final int switch_thumb_normal_material_dark=0x7f0c0037;
         public static final int switch_thumb_normal_material_light=0x7f0c0038;
         public static final int tooltip_background_dark=0x7f0c0039;
