@@ -4,7 +4,8 @@ package md573d03284b2069377f011c43ff07110ed;
 public class MainActivity_MyAdapter
 	extends android.widget.BaseAdapter
 	implements
-		mono.android.IGCUserPeer
+		mono.android.IGCUserPeer,
+		android.widget.Filterable
 {
 /** @hide */
 	public static final String __md_methods;
@@ -14,6 +15,7 @@ public class MainActivity_MyAdapter
 			"n_getItem:(I)Ljava/lang/Object;:GetGetItem_IHandler\n" +
 			"n_getItemId:(I)J:GetGetItemId_IHandler\n" +
 			"n_getView:(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;:GetGetView_ILandroid_view_View_Landroid_view_ViewGroup_Handler\n" +
+			"n_getFilter:()Landroid/widget/Filter;:GetGetFilterHandler:Android.Widget.IFilterableInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\n" +
 			"";
 		mono.android.Runtime.register ("ListViewCheckBoxTest.MainActivity+MyAdapter, ListViewCheckBoxTest", MainActivity_MyAdapter.class, __md_methods);
 	}
@@ -57,6 +59,14 @@ public class MainActivity_MyAdapter
 	}
 
 	private native android.view.View n_getView (int p0, android.view.View p1, android.view.ViewGroup p2);
+
+
+	public android.widget.Filter getFilter ()
+	{
+		return n_getFilter ();
+	}
+
+	private native android.widget.Filter n_getFilter ();
 
 	private java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)

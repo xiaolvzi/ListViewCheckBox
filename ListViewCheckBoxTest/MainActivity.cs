@@ -6,24 +6,29 @@ using System.Collections.Generic;
 using Android.Content;
 using Android.Views;
 using Android.Util;
+using Java.Lang;
+using Android.Text;
 
 namespace ListViewCheckBoxTest
 {
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
-    public class MainActivity : Activity
+    public class MainActivity : Activity,Android.Text.ITextWatcher
     {
         ListView mListView;
+        static List<Button> list = new List<Button>();
         MyAdapter adapter;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
+            list.Add(new Button(this));
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
             
             mListView = FindViewById<ListView>(Resource.Id.listview);
 
-           
+            EditText et = FindViewById<EditText>(Resource.Id.et);
+            et.AddTextChangedListener(this);
+
             adapter = new MyAdapter(this, MyApplication.useritems);
             mListView.Adapter = adapter;
             mListView.ItemClick += MListView_ItemClick;
@@ -60,16 +65,36 @@ namespace ListViewCheckBoxTest
             DBHelper.updateData(MyApplication.daoList);
         }
 
-        class MyAdapter : BaseAdapter
+
+        // Text watch start --------------------------------------------------
+        public void AfterTextChanged(IEditable s)
+        {
+           
+        }
+
+        public void BeforeTextChanged(ICharSequence s, int start, int count, int after)
+        {
+           
+        }
+
+        public void OnTextChanged(ICharSequence s, int start, int before, int count)
+        {
+            adapter.Filter.InvokeFilter(s);
+        }
+
+        // Text watch end --------------------------------------------------
+        class MyAdapter : BaseAdapter, IFilterable
         {
             Context mContext;
-            List<TableList> mitems;
+            List<TableList> mitems { get; set; }
             public MyAdapter(Context context, List<TableList> list)
             {
                 this.mContext = context;
                 this.mitems = list;
 
             }
+
+
             public override int Count
             {
                 get
@@ -77,6 +102,9 @@ namespace ListViewCheckBoxTest
                     return mitems.Count;
                 }
             }
+
+
+            public Filter Filter { get { return new MyFilter(mitems,this); } }
 
             public override Java.Lang.Object GetItem(int position)
             {
@@ -140,6 +168,83 @@ namespace ListViewCheckBoxTest
                 mitems[tag].bl = v;
                 this.NotifyDataSetChanged();
                // DBHelper.updateData(new Dao(tag + 1, mitems[tag].Name, mitems[tag].bl));
+            }
+
+            public class MyFilter : Filter
+            {
+                List<TableList> originData;
+                List<TableList> tempData;
+                MyAdapter adapter;
+                public MyFilter(List<TableList> data,MyAdapter adapter)
+                {
+                    this.originData = data;
+                    this.tempData = MyApplication.useritems;
+                    this.adapter = adapter;
+
+                }
+                protected override FilterResults PerformFiltering(ICharSequence constraint)
+                {
+                    FilterResults results = new FilterResults();
+                    if (constraint==null||constraint.Length()==0)
+                    {
+                        TableList[] resultsValues = new TableList[tempData.Count];
+                        for (int i = 0; i < tempData.Count; i++)
+                        {
+                            resultsValues[i] = tempData[i];
+                        }
+                        results.Values = resultsValues;
+                        results.Count = tempData.Count;
+                    }
+                    else
+                    {
+
+                        List<TableList> mitemsFilter = new List<TableList>();
+                        var s = constraint.ToString().ToLower();
+
+                        for (int i = 0; i < originData.Count; i++)
+                        {
+                            string dataNames = originData[i].Name;
+                            if (dataNames.ToLower().StartsWith(s.ToString()))
+                            {
+                                mitemsFilter.Add(originData[i]);
+                            }
+                        }
+
+
+                        TableList[] resultsValues = new TableList[mitemsFilter.Count];
+                        for (int i = 0; i < mitemsFilter.Count; i++)
+                        {
+                            resultsValues[i] = mitemsFilter[i];
+                        }
+
+                        results.Count = mitemsFilter.Count;
+                        results.Values = resultsValues;
+                    }
+                    return results;
+
+                }
+
+                protected override void PublishResults(ICharSequence constraint, FilterResults results)
+                {
+                    var arry=results.Values.ToArray<TableList>();
+                    List<TableList> filteredList = new List<TableList>();
+                    for (int i = 0; i < arry.Length; i++)
+                    {
+                        filteredList.Add(arry[i]);
+                    }
+                    this.adapter.mitems= filteredList;
+
+                    if (results.Count > 0)
+                    {
+                        this.adapter.NotifyDataSetChanged();
+                    }
+                    else
+                    {
+                        this.adapter.NotifyDataSetInvalidated();
+                   }
+                    
+
+                }
             }
         }
 

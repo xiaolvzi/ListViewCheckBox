@@ -59,7 +59,8 @@ namespace ListViewCheckBoxTest
             {
                 list = db.Query<Dao>("select * from Dao");
             }
-            catch (Exception e) {
+            catch (Exception e)
+            {
 
             }
            

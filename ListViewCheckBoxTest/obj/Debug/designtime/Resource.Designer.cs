@@ -24,10 +24,6 @@ namespace ListViewCheckBoxTest
 			global::Android.Runtime.ResourceIdManager.UpdateIdValues();
 		}
 		
-		public static void UpdateIdValues()
-		{
-		}
-		
 		public partial class Animation
 		{
 			
@@ -2455,6 +2451,9 @@ namespace ListViewCheckBoxTest
 			
 			// aapt resource value: 2131492910
 			public static int end_padder = 2131492910;
+			
+			// aapt resource value: 0
+			public static int et = 0;
 			
 			// aapt resource value: 2131492912
 			public static int expanded_menu = 2131492912;
